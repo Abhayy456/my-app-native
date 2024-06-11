@@ -2,6 +2,15 @@ import { StyleSheet, Text, View } from "react-native";
 import React, { useEffect } from "react";
 import { Slot, SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
+
+const Header = () => {
+  return (
+    <View style={styles.headerContainer}>
+      <Text>ljhbas</Text>
+    </View>
+  );
+};
+
 const RootLayout = () => {
   const [fontsLoaded, error] = useFonts({
     "Poppins-Black": require("../assets/fonts/Poppins-Black.ttf"),
@@ -23,19 +32,19 @@ const RootLayout = () => {
     }
   }, [fontsLoaded, error]);
 
-  if(!fontsLoaded && !error){
+  if (!fontsLoaded && !error) {
     return null;
   }
   return (
-    // <>
-    //   <Text>header</Text>
-    //   <Slot />
-    //   <Text>footer</Text>
-    // </>
-
     <Stack>
       <Stack.Screen
         name="index"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="(tabs)"
         options={{
           headerShown: false,
         }}

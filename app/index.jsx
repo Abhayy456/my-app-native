@@ -62,7 +62,11 @@ export default function App() {
       >
         <View className="w-full items-center h-full">
           <Header />
-          <UserDetails />
+          <CustomButton
+            title={"login"}
+            containerStyles="w-full m-24"
+            handlePress={() => router.push("home")}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

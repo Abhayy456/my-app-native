@@ -1,6 +1,7 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, SafeAreaView } from "react-native";
 import React from "react";
-import { Tabs, Redirect } from "expo-router";
+import { Tabs, Redirect, Stack } from "expo-router";
+import { StyleSheet } from "react-native";
 
 import { icons } from "../../constants";
 
@@ -29,12 +30,11 @@ const TabsLayout = () => {
       <Tabs
         screenOptions={{
           tabBarShowLabel: false,
-          tabBarActiveTintColor: "#FFA001",
+          tabBarActiveTintColor: "#344054",
           tabBarInactiveTintColor: "#CDCDE0",
           tabBarStyle: {
-            backgroundColor: "#161622",
+            backgroundColor: "#FFFFFF",
             borderTopWidth: 1,
-            borderTopColor: "#232533",
             height: 84,
           },
         }}
@@ -42,13 +42,13 @@ const TabsLayout = () => {
         <Tabs.Screen
           name="home"
           options={{
-            title: "Home",
+            title: "Earnings",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 icon={icons.home}
                 color={color}
-                name="Home"
+                name="Earnings"
                 focused={focused}
               />
             ),
@@ -57,13 +57,13 @@ const TabsLayout = () => {
         <Tabs.Screen
           name="bookmark"
           options={{
-            title: "BookMark",
+            title: "Incentives",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 icon={icons.bookmark}
                 color={color}
-                name="BookMark"
+                name="Incentives"
                 focused={focused}
               />
             ),
@@ -72,16 +72,38 @@ const TabsLayout = () => {
         <Tabs.Screen
           name="profile"
           options={{
-            title: "Profile",
+            title: "Streaks",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 icon={icons.profile}
                 color={color}
-                name="Profile"
+                name="Streaks"
                 focused={focused}
               />
             ),
+          }}
+        />
+        <Tabs.Screen
+          name="refer"
+          options={{
+            title: "Refer",
+            headerShown: false,
+            tabBarIcon: ({ color, focused }) => (
+              <TabIcon
+                icon={icons.profile}
+                color={color}
+                name="Refer"
+                focused={focused}
+              />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="help"
+          options={{
+            href: null,
+            headerShown: false,
           }}
         />
       </Tabs>
@@ -90,3 +112,22 @@ const TabsLayout = () => {
 };
 
 export default TabsLayout;
+
+const styles = StyleSheet.create({
+  headerContainer: {
+    width: "100%",
+    display: "flex",
+    backgroundColor: "#25408F",
+    height: "30%",
+    position: "fixed",
+  },
+  userDetails: {
+    position: "absolute",
+  },
+  rangeContainer: {
+    backgroundColor: "white",
+  },
+  amountText: {
+    color: "#079455",
+  },
+});

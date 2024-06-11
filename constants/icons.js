@@ -12,6 +12,14 @@ import eyeHide from "../assets/icons/eye-hide.png";
 import eye from "../assets/icons/eye.png";
 import play from "../assets/icons/play.png";
 import help from "../assets/icons/help.png";
+import bank from "../assets/icons/bank.png";
+import chat from "../assets/icons/chat.png";
+import phone from "../assets/icons/phone.png";
+import messages from "../assets/icons/messages.png";
+import query from "../assets/icons/query.png";
+import chevron from "../assets/icons/chevron-right.png";
+import arrow from "../assets/icons/arrow-narrow-left.png";
+// import phone from "../assets/icons/phone.png";
 
 export default {
   play,
@@ -27,5 +35,12 @@ export default {
   logout,
   eyeHide,
   eye,
-  help
+  help,
+  bank,
+  chat,
+  phone,
+  messages,
+  query,
+  chevron,
+  arrow,
 };
