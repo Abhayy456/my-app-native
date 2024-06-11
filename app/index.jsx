@@ -5,6 +5,9 @@ import FormField from "./components/FormField";
 import { BarChart, StackedBarChart } from "react-native-chart-kit";
 import { barData } from "../constants/mockData";
 
+import RateCard from "./RateCard";
+import HelpScreen from "./HelpScreen";
+
 import {
   Text,
   View,
@@ -13,6 +16,7 @@ import {
   ScrollView,
   StyleSheet,
 } from "react-native";
+
 import { images, icons } from "../constants";
 import { useState } from "react";
 
@@ -21,7 +25,7 @@ import { faker } from "@faker-js/faker";
 const Header = () => {
   return (
     <View style={styles.headerContainer}>
-      <Text>ljhbas</Text>
+      
     </View>
   );
 };
@@ -61,8 +65,10 @@ export default function App() {
         contentContainerStyle={{ height: "100%", backgroundColor: "#D9D9D9" }}
       >
         <View className="w-full items-center h-full">
-          <Header />
-          <UserDetails />
+          
+
+          <HelpScreen/>
+          {/* <RateCard/> */}
         </View>
       </ScrollView>
     </SafeAreaView>
